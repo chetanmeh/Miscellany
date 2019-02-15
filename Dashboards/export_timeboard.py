@@ -5,12 +5,12 @@ from datadog import initialize, api
 import json
 
 options = {
-    'api_key': 'c086441f807d722a33581be620f0fe6b',
-    'app_key': '77c3ff4b62a550496d0a93cd126d26675dc23f3e'
+    'api_key': '<key_here>',
+    'app_key': '<key_here>'
 }
 
 initialize(**options)
 
-sb = api.Screenboard.get(582787)
-file = open("sb.json", "w")
+sb = api.Timeboard.get("timeboard-id")
+file = open("tb.json", "w")
 file.write(json.dumps(sb, indent=4, sort_keys=True))
